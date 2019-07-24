@@ -109,7 +109,7 @@ module.exports = {
                 https: true,
                 www: false,
                 SymLinksIfOwnerMatch: true,
-                host: 'https://jxos.work'
+                host: 'jxos.work'
             }
         }
         /**{
