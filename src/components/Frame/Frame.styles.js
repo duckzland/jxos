@@ -65,14 +65,16 @@ const styles = theme => ({
     frame_c: {
         opacity: 0,
         fill: 'none',
-        stroke: theme.color.secondary.light,
+        //stroke: theme.color.secondary.light,
+        stroke: theme.color.gradient.orange_one,
         strokeWidth: 1.4,
         vectorEffect: 'non-scaling-stroke'
     },
     frame_d: {
         opacity: 0,
         fill: 'none',
-        stroke: theme.color.secondary.light,
+        //stroke: theme.color.secondary.light,
+        stroke: theme.color.gradient.orange_one,
         strokeWidth: 1.4,
         vectorEffect: 'non-scaling-stroke'
     },

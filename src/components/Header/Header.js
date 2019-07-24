@@ -75,8 +75,7 @@ class Component extends React.Component {
         const paths = this.svgElement  ? this.svgElement.querySelectorAll('path') : false;
 
         this.playSound();
-        this.setState({show: true});
-
+        //this.setState({show: true});
         anime({
             targets: this.element,
             translateY: ['-100%', 0],
@@ -93,20 +92,32 @@ class Component extends React.Component {
 
             anime({
                 targets: paths,
+                opacity: 1,
                 strokeDashoffset: [getPathLength, 0],
                 easing: 'easeOutCubic',
                 duration: energy.duration.enter * 2
             });
         }
+
+        this.state.show = true;
     }
 
     exit() {
         const { sounds, energy } = this.props;
         const paths = this.svgElement  ? this.svgElement.querySelectorAll('path') : false;
+        const duration = this.getDurationEnter();
 
         sounds.deploy.play();
 
-        this.setState({show: false});
+        //this.setState({show: false});
+
+        anime({
+            targets: this.element,
+            translateY: [0, '-100%'],
+            easing: 'easeOutCubic',
+            duration,
+            complete: () => this.stopSound()
+        });
 
         paths && anime({
             targets: paths,
@@ -115,6 +126,8 @@ class Component extends React.Component {
             easing: 'easeOutCubic',
             duration: energy.duration.exit
         });
+
+        this.state.show = false;
     }
 
     stop() {

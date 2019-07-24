@@ -25,7 +25,6 @@ class Component extends React.Component {
     render() {
         const { location, classes, layout, background, children } = this.props;
         const { animation } = background;
-        const isURLContent = location.pathname !== '/';
         const bgShow = true;
 
         return (
@@ -34,13 +33,16 @@ class Component extends React.Component {
                     <defs>
                         <linearGradient id="orange-one" x1="0%" y1="0" x2="100%" y2="100%">
                             <stop offset="0%" className="stop-one" stopColor="#ff7900"></stop>
-                            <stop offset="50%" className="stop-two" stopColor="#ffb079"></stop>
-                            <stop offset="100%" className="stop-two" stopColor="#ff4f00"></stop>
+                            <stop offset="60%" className="stop-two" stopColor="#ff7900"></stop>
+                            <stop offset="80%" className="stop-three" stopColor="#ff4f00"></stop>
+                            <stop offset="100%" className="stop-four" stopColor="#ffb079"></stop>
                         </linearGradient>
                     </defs>
                 </svg>
                 <Background {...background} animation={{ bgShow, ...animation }} >
-                    {isURLContent ? <App>{children}</App> : children}
+                    <App location={location}>
+                    { children }
+                    </App>
                 </Background>
             </Layout>
         );

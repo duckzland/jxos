@@ -161,6 +161,7 @@ class Component extends React.PureComponent {
             onLinkEnd
         };
 
+
         return (
             <Secuence animation={{ show: showSecuence, independent: true }} stagger>
                 <nav className={cx(classes.root, className)}

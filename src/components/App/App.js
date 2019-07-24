@@ -13,8 +13,23 @@ class Component extends React.Component {
         theme: PropTypes.object.isRequired,
         classes: PropTypes.object.isRequired,
         className: PropTypes.any,
-        children: PropTypes.any
+        children: PropTypes.any,
+        location: PropTypes.any
     };
+
+    state = {
+        show: false
+    };
+
+    constructor() {
+        super(...arguments);
+
+        const prefix = '';
+        this.state = {
+            show: this.props.location.pathname !== '/' + prefix,
+            animate: false,
+        };
+    }
 
     componentDidMount() {
         window.addEventListener('route-change-start', this.onRouteChangeStart);
@@ -30,40 +45,35 @@ class Component extends React.Component {
         if (isInternal && href === '/') {
             this.header.exit();
             this.footer.exit();
+            this.state.show = false;
         }
-    }
+        else {
+            this.state.animate = !this.state.show;
+            this.state.show = true;
+        }
+    };
 
     onRouteChange = () => {
         this.contentElement.scrollTo(0, 0);
-    }
+        if (this.state.animate) {
+            this.header.enter();
+            this.footer.enter();
+        }
+    };
 
     render() {
-        const {
-            theme,
-            classes,
-            className,
-            children,
-            ...etc
-            } = this.props;
+        const { theme, classes, className, children, location, ...etc } = this.props;
+        const { show  } = this.state;
 
         return (
             <div className={cx(classes.root, className)} {...etc}>
-                <Header
-                    className={classes.header}
-                    ref={ref => (this.header = ref)}
-                    />
+                { show && <Header className={classes.header} ref={ref => (this.header = ref)}/> }
 
-                <div
-                    className={classes.content}
-                    ref={ref => (this.contentElement = ref)}
-                    >
+                <div className={classes.content} ref={ref => (this.contentElement = ref)}>
                     <AppContent>
                         {children}
                     </AppContent>
-                    <Footer
-                        className={classes.footer}
-                        ref={ref => (this.footer = ref)}
-                        />
+                    { show && <Footer className={classes.footer} ref={ref => (this.footer = ref)}/> }
                 </div>
             </div>
         );
