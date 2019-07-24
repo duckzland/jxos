@@ -109,7 +109,14 @@ module.exports = {
                 https: true,
                 www: false,
                 SymLinksIfOwnerMatch: true,
-                host: 'jxos.work'
+                host: 'jxos.work',
+                custom: `
+                <IfModule mod_expires.c>
+                    ExpiresActive On
+                    ExpiresByType application/json "access 1 month"
+                    ExpiresByType application/manifest+json "access 1 month"
+                </IfModule>
+                `
             }
         }
         /**{
