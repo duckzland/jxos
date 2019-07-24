@@ -127,11 +127,11 @@ module.exports = {
                 useShortDoctype: false
             }
         }
-        /**{
+        {
             resolve: 'gatsby-plugin-google-analytics',
             options: {
-                trackingId: 'UA-64916263-1'
+                trackingId: 'UA-144471740-1'
             }
-        }**/
+        }
     ]
 };
