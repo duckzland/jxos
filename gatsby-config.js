@@ -118,6 +118,14 @@ module.exports = {
                 </IfModule>
                 `
             }
+        },
+        {
+            resolve: 'gatsby-plugin-html-minifier',
+            options: {
+                caseSensitive: false,
+                collapseBooleanAttributes: false,
+                useShortDoctype: false
+            }
         }
         /**{
             resolve: 'gatsby-plugin-google-analytics',
