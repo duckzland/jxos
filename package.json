@@ -5,6 +5,7 @@
   "license": "GNUv3",
   "scripts": {
     "lint": "eslint ./src",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "develop": "gatsby develop --host 192.168.0.108 --port 14000",
     "build": "gatsby build",
     "server": "NODE_ENV=production PORT=14000 HOST=127.0.0.1 node server.js"
@@ -47,6 +48,7 @@
     "gatsby-remark-prismjs": "^3.3.3",
     "gatsby-remark-smartypants": "^2.1.2",
     "gatsby-transformer-remark": "^2.6.8",
+    "gh-pages": "^2.0.1",
     "prismjs": "^1.17.1"
   }
 }

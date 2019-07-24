@@ -1,6 +1,7 @@
 const theme = require('./src/settings/theme');
 
 module.exports = {
+    pathPrefix: "/jxos",
     plugins: [
         {
             resolve: 'gatsby-plugin-jss',
