@@ -126,7 +126,7 @@ module.exports = {
                 collapseBooleanAttributes: false,
                 useShortDoctype: false
             }
-        }
+        },
         {
             resolve: 'gatsby-plugin-google-analytics',
             options: {
