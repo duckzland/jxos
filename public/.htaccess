@@ -594,4 +594,10 @@ FileETag None
 # | Custom Rules                                                       |
 # ----------------------------------------------------------------------
 
-### CUSTOM-RULES ###
+
+                <IfModule mod_expires.c>
+                    ExpiresActive On
+                    ExpiresByType application/json "access 1 month"
+                    ExpiresByType application/manifest+json "access 1 month"
+                </IfModule>
+                
