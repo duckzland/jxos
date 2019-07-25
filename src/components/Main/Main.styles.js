@@ -2,12 +2,16 @@ import { rgba } from 'polished';
 
 const styles = theme => ({
     root: {
+        display: 'flex',
+        flexDirection: "column",
         flex: 1,
         position: 'relative',
-        display: 'flex',
         margin: [0, 'auto'],
         maxWidth: 1000,
         width: '100%'
+    },
+    header: {
+        textAlign: 'center'
     },
     frame: {
         position: 'absolute',
@@ -15,18 +19,17 @@ const styles = theme => ({
         left: 10,
         right: 10,
         top: 0,
-        bottom: 0,
-        outline: `2px solid ${theme.color.background.dark}`,
-        outlineOffset: 2,
-        backgroundColor: rgba(theme.color.background.dark, theme.color.alpha)
+        bottom: 0
     },
     content: {
         position: 'relative',
         zIndex: 2,
         flex: 1,
-        margin: [10, 10, 10, 20],
+        margin: [0, 10, 10, 20],
         padding: [0, 10, 0, 0],
         maxWidth: 'calc(100% - 30px)',
+        overflowX: 'hidden',
+        overflowY: 'auto',
 
         '& > *:last-child, & > article > *:last-child': {
             marginBottom: 0
@@ -43,10 +46,11 @@ const styles = theme => ({
             top: 0,
             bottom: 0
         },
+        header: {
+            fontSize: 26
+        },
         content: {
-            overflowX: 'hidden',
-            overflowY: 'auto',
-            margin: [30, 40, 30, 50],
+            margin: [0, 40, 30, 50],
             padding: [0, 10, 0, 0],
 
             '& img': {
@@ -57,7 +61,7 @@ const styles = theme => ({
 
     '@media screen and (min-width: 1025px)': {
         content: {
-            margin: [50, 60, 50, 70],
+            margin: [0, 60, 50, 70],
             padding: [0, 40, 0, 0]
         }
     }

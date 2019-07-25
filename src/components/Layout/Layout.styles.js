@@ -88,6 +88,7 @@ const styles = theme => ({
         },
         hr: {
             color: 'transparent',
+            border: 'none',
             margin: [60, 0]
         },
         blockquote: {

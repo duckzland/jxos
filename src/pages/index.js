@@ -42,6 +42,11 @@ const styles = theme => {
             left: '50%',
             bottom: 0,
             transform: 'translateX(-50%)'
+        },
+        '@media (max-width: 560px)' : {
+            brand: {
+                width: '80%'
+            }
         }
     };
 };

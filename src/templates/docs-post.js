@@ -14,13 +14,10 @@ import cx from 'classnames';
 
 const styles = theme => ({
     root: {},
-    header: {
-        textAlign: 'center'
-    },
     main: {
         position: 'relative',
         display: 'block',
-        margin: [60, 0]
+        margin: [30, 0, 60]
     },
     frame: {
         position: 'relative',
@@ -42,6 +39,11 @@ const styles = theme => ({
         height: '100%',
         shapeRendering: 'geometricPrecision'
     },
+    '@media (max-width: 560px)' : {
+        inner: {
+            padding: [20, 30]
+        },
+    }
 });
 
 class DocsPost extends React.Component {
@@ -54,12 +56,9 @@ class DocsPost extends React.Component {
         const post = this.props.data.markdownRemark;
 
         return (
-            <Main className={classes.root}>
+            <Main className={classes.root} title={ post.frontmatter.title }>
                 <article>
                     <Secuence stagger>
-                        <header className={ classes.header }>
-                            <h1><Text>{ post.frontmatter.title }</Text></h1>
-                        </header>
                         <Fader className={ classes.main }>
                             <Frame type="frame_c" className={classes.frame} classes={classes}/>
                             <div className={classes.inner} dangerouslySetInnerHTML={{ __html: post.html }} />

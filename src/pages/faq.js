@@ -4,20 +4,17 @@ import PropTypes from 'prop-types';
 import { Frame } from '../components/Frame';
 import { withStyles } from '../tools/withStyles';
 import { Main } from '../components/Main';
-import { Text } from '../components/Text';
 import { Fader } from '../components/Fader';
 import { Secuence } from '../components/Secuence';
+import { Text } from '../components/Text';
 import { graphql } from 'gatsby';
 
 const styles = theme => ({
     root: {},
-    header: {
-        textAlign: 'center'
-    },
     faq: {
         display: 'flex',
         flexWrap: 'wrap',
-        margin: [60, -20],
+        margin: [30, -20, 60],
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -49,19 +46,16 @@ class FAQ extends React.Component {
     render() {
         const { classes, data } = this.props;
         return (
-            <Main className={classes.root}>
+            <Main className={classes.root} title="Frequently Asked Questions">
                 <article>
                     <Secuence stagger>
-                        <header className={ classes.header }>
-                            <h1><Text>Frequently Asked Questions</Text></h1>
-                        </header>
                         <div className={ classes.faq }>
                             { data.allFaqYaml.edges.map((n, d) => {
                                 return (
                                     <Fader key={ 'faq-' + d } className={ classes.item }>
                                         <Frame type="frame_a">
-                                            <h4 className={ classes.question }>{ n.node.q }</h4>
-                                            <div className={ classes.answer }>{ n.node.a }</div>
+                                            <h4 className={ classes.question }><Text>{ n.node.q }</Text></h4>
+                                            <div className={ classes.answer }><Text>{ n.node.a }</Text></div>
                                         </Frame>
                                     </Fader>
                                 )

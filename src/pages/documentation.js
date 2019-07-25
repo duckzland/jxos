@@ -12,13 +12,10 @@ import { graphql } from 'gatsby';
 
 const styles = theme => ({
     root: {},
-    header: {
-        textAlign: 'center'
-    },
     faq: {
         display: 'flex',
         flexWrap: 'wrap',
-        margin: [60, -20],
+        margin: [30, -20, 60],
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -50,19 +47,16 @@ class Documentation extends React.Component {
     render() {
         const { classes, data } = this.props;
         return (
-            <Main className={classes.root}>
+            <Main className={classes.root} title="Documentation">
                 <article>
                     <Secuence stagger>
-                        <header className={ classes.header }>
-                            <h1><Text>Documentation</Text></h1>
-                        </header>
                         <div className={ classes.faq }>
                             { data.allMarkdownRemark.edges.map((n, d) => {
                                 return (
                                     <Fader key={ 'docs-' + d }className={ classes.item }>
                                         <Frame type="frame_a" linkText="More.." linkUrl={n.node.fields.slug}>
-                                            <h4 className={ classes.question }>{ n.node.frontmatter.title }</h4>
-                                            <div className={ classes.answer }>{ n.node.excerpt }</div>
+                                            <Text><h4 className={ classes.question }>{ n.node.frontmatter.title }</h4></Text>
+                                            <Text><div className={ classes.answer }>{ n.node.excerpt }</div></Text>
                                         </Frame>
                                     </Fader>
                                 )

@@ -12,13 +12,10 @@ import { graphql } from 'gatsby';
 
 const styles = theme => ({
     root: {},
-    header: {
-        textAlign: 'center'
-    },
     download: {
         display: 'flex',
         flexWrap: 'wrap',
-        margin: [60, -20],
+        margin: [30, -20, 60],
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -67,24 +64,21 @@ class Download extends React.Component {
     render() {
         const { classes, data } = this.props;
         return (
-            <Main className={classes.root}>
+            <Main className={classes.root} title="Download Files">
                 <article>
                     <Secuence stagger>
-                        <header className={ classes.header }>
-                            <h1><Text>Download Files</Text></h1>
-                        </header>
                         <div className={ classes.download }>
                             { data.allDownloadYaml.edges.map((n, d) => {
                                 return (
                                     <Fader key={ 'download-' + d } className={ classes.item }>
                                         <Frame type="frame_a">
-                                            <h4 className={ classes.title }>{ n.node.title }</h4>
-                                            <div className={ classes.description }>{ n.node.description }</div>
-                                            <div className={ classes.version }>Version: { n.node.version }</div>
-                                            <div className={ classes.action }>
+                                            <h4 className={ classes.title }><Text>{ n.node.title }</Text></h4>
+                                            <div className={ classes.description }><Text>{ n.node.description }</Text></div>
+                                            <div className={ classes.version }><Text>Version: { n.node.version }</Text></div>
+                                            <div className={ classes.action }><Text>
                                                 <Link target="_blank" href={n.node.project}>View Project</Link>
                                                 <Link target="_blank" href={n.node.url}>Download</Link>
-                                            </div>
+                                            </Text></div>
                                         </Frame>
                                     </Fader>
                                 )
