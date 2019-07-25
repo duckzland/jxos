@@ -10,12 +10,11 @@ const Component = ({ children }) => (
   <>
     <Helmet>
       <html lang='en' />
-
+      <title>{meta.title}</title>
       <meta name='viewport' content='width=device-width, initial-scale=1' />
       <meta httpEquiv='X-UA-Compatible' content='IE=edge,chrome=1' />
 
       <meta name='robots' content='index, follow' />
-      <title>{meta.title}</title>
       <meta name='description' content={meta.description} />
       <meta name='keywords' content={meta.keywords} />
 
