@@ -65,7 +65,7 @@ const styles = theme => ({
         transform: 'scale(1, 0)',
         transformOrigin: 'center center'
     },
-    '@media screen and (min-width: 768px)': {
+    '@media screen and (min-width: 561px)': {
         root: {
             marginBottom: 20
         },
@@ -80,7 +80,7 @@ const styles = theme => ({
         }
     },
 
-    '@media screen and (max-width: 800px)': {
+    '@media screen and (max-width: 560px)': {
         content: {
             flexDirection: 'column',
             justifyContent: 'center',
@@ -95,7 +95,7 @@ const styles = theme => ({
         }
     },
 
-    '@media screen and (max-width: 997px) and (min-width: 800px)': {
+    '@media screen and (max-width: 997px) and (min-width: 561px)': {
         svg: {
             left: '-185px'
         }
