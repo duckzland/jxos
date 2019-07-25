@@ -78,12 +78,12 @@ const styles = theme => ({
         menu: {
             margin: 0
         },
-        svg {
-            left: calc(50vw - 290px)
+        svg: {
+            left: 'calc(50vw - 290px)'
         }
     },
 
-    '@media screen and (max-width: 850px)': {
+    '@media screen and (max-width: 800px)': {
         content: {
             flexDirection: 'column',
             justifyContent: 'center',
