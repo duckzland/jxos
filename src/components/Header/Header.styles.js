@@ -77,9 +77,6 @@ const styles = theme => ({
         },
         menu: {
             margin: 0
-        },
-        svg: {
-            left: 'calc(50vw - 290px)'
         }
     },
 
@@ -92,10 +89,13 @@ const styles = theme => ({
         menu: {
             marginTop: 20,
             justifyContent: 'center'
+        },
+        svg: {
+            left: 'calc(50vw - 290px)'
         }
     },
 
-    '@media screen and (max-width: 997px)': {
+    '@media screen and (max-width: 997px) and (min-width: 800px)': {
         svg: {
             left: '-185px'
         }
