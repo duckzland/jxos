@@ -75,10 +75,10 @@ class Download extends React.Component {
                                             <h4 className={ classes.title }><Text>{ n.node.title }</Text></h4>
                                             <div className={ classes.description }><Text>{ n.node.description }</Text></div>
                                             <div className={ classes.version }><Text>Version: { n.node.version }</Text></div>
-                                            <div className={ classes.action }><Text>
-                                                <Link target="_blank" href={n.node.project}>View Project</Link>
-                                                <Link target="_blank" href={n.node.url}>Download</Link>
-                                            </Text></div>
+                                            <div className={ classes.action }>
+                                                <Link target="_blank" href={n.node.project}><Text>View Project</Text></Link>
+                                                <Link target="_blank" href={n.node.url}><Text>Download</Text></Link>
+                                            </div>
                                         </Frame>
                                     </Fader>
                                 )

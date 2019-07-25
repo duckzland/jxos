@@ -55,8 +55,8 @@ class Documentation extends React.Component {
                                 return (
                                     <Fader key={ 'docs-' + d }className={ classes.item }>
                                         <Frame type="frame_a" linkText="More.." linkUrl={n.node.fields.slug}>
-                                            <Text><h4 className={ classes.question }>{ n.node.frontmatter.title }</h4></Text>
-                                            <Text><div className={ classes.answer }>{ n.node.excerpt }</div></Text>
+                                            <h4 className={ classes.question }><Text>{ n.node.frontmatter.title }</Text></h4>
+                                            <div className={ classes.answer }><Text>{ n.node.excerpt }</Text></div>
                                         </Frame>
                                     </Fader>
                                 )
