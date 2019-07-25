@@ -87,7 +87,8 @@ const styles = theme => ({
             alignItems: 'flex-start'
         },
         menu: {
-            marginTop: 10
+            marginTop: 20,
+            justifyContent: 'center'
         }
     },
 

@@ -26,6 +26,7 @@ const styles = theme => ({
         flex: 1,
         margin: [10, 10, 10, 20],
         padding: [0, 10, 0, 0],
+        maxWidth: 'calc(100% - 30px)',
 
         '& > *:last-child, & > article > *:last-child': {
             marginBottom: 0
