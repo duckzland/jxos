@@ -2,7 +2,11 @@ const theme = require('./src/settings/theme');
 
 module.exports = {
     pathPrefix: "/jxos",
+    siteMetadata: {
+        siteUrl: `https://jxos.work`,
+    },
     plugins: [
+        `gatsby-plugin-sitemap`,
         {
             resolve: 'gatsby-plugin-jss',
             options: {theme}
