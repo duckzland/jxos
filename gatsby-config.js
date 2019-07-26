@@ -137,6 +137,7 @@ module.exports = {
             options: {
                 trackingId: 'UA-144471740-1'
             }
-        }
+        },
+        `gatsby-plugin-catch-links`
     ]
 };

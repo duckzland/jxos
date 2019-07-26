@@ -9,6 +9,7 @@ import { Text } from '../components/Text';
 import { Fader } from '../components/Fader';
 import { Secuence } from '../components/Secuence';
 import { graphql } from 'gatsby';
+import { Donation } from '../components/Donation';
 
 import cx from 'classnames';
 
@@ -64,6 +65,7 @@ class DocsPost extends React.Component {
                             <div className={classes.inner} dangerouslySetInnerHTML={{ __html: post.html }} />
                             <Frame type="frame_d" className={classes.frame} classes={classes}/>
                         </Fader>
+                        <Donation />
                     </Secuence>
                 </article>
             </Main>

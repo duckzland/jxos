@@ -4,12 +4,11 @@
 
 -
   q: Any warranty or guarantee provided?
-  a: JXOS is provided for you as is, without any guarantee or warranty.
+  a: JXOS is provided for you as is, without any guarante or warranty.
 
 -
   q: Why LiveISO mines to Developer wallets on start?
-  a: We assume that LiveISO version is for TESTING only, thus it must have a wallet address to properly start the miner
-     for testing usage. Please use the Image installation for production server.
+  a: We assume that LiveISO version is for TESTING only, thus it must have a proper wallet address for miner to use. Please use the Image installation for production server.
 
 -
   q: Supported Graphic Cards
@@ -21,19 +20,19 @@
 
 -
   q: Is running both CPU and GPU miner possible?
-  a: Yes, it is possible and tested.
+  a: Yes, it is possible.
 
 -
   q: Is wireless connection supported?
-  a: No, wireless support must be installed separately
+  a: No, wireless support must be installed separately.
 
 -
   q: Do you use static ip for the miner box?
-  a: By default it will use DHCP to detect the miner box IP address, but it is recommended to change it to static ip address as it will boot faster comparing to DHCP
+  a: By default it will use DHCP to detect the miner box IP address, but it is recommended to use static ip address instead for faster booting process.
 
 -
   q: Is this open source?
-  a: Yes, all the build scripts and other supporting software is open sources as much as possible.
+  a: Yes, all the build scripts and other supporting software is open sourced as much as possible.
 
 -
   q: What miners does this os support?
@@ -41,8 +40,11 @@
 
 -
   q: What is the Linux distro this OS based on?
-  a: This OS is based on Ubuntu linux distro
+  a: This OS is based on Ubuntu Linux distro
 
 -
   q: What is the default user and password?
   a: The default preconfigured username is jxminer with password of jxminer
+
+
+

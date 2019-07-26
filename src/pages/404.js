@@ -7,6 +7,7 @@ import { Button } from '../components/Button';
 import { Link } from '../components/Link';
 import { Secuence } from '../components/Secuence';
 import { Frame } from '../components/Frame';
+import { Donation } from '../components/Donation';
 
 const styles = theme => ({
     root: {
@@ -57,6 +58,7 @@ class NotFound extends React.PureComponent {
                             <h1><Text>Not found</Text></h1>
                             <p><Text>The location you are looking for was not found in the system.</Text></p>
                         </Frame>
+                        <Donation />
                     </Secuence>
                 </main>
             </div>

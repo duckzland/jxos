@@ -59,19 +59,21 @@ class Component extends React.PureComponent {
 
         const onLinkTrigger = event => {
             event.preventDefault();
+            event.stopPropagation();
 
             if (this.state.inAction) {
-                return;
+                return false;
             }
 
             if (href !== '/' && global.location && global.location.pathname.includes(href)) {
-                return;
+                return false;
             }
 
             if (!href) {
                 onClick && onClick(event);
-                return;
+                return false;
             }
+
 
             this.state.inAction = true;
 
@@ -89,7 +91,7 @@ class Component extends React.PureComponent {
 
             if (isSame) {
                 this.state.inAction = false;
-                return;
+                return false;
             }
 
             onClick && onClick(event);
@@ -104,10 +106,14 @@ class Component extends React.PureComponent {
             globalLinkTimeout = setTimeout(() => {
                 if (target) {
                     window.open(href);
-                } else if (isExternalURL) {
+                }
+
+                else if (isExternalURL) {
                     window.location.href = href;
-                } else {
-                    navigate(href);
+                }
+
+                else {
+                    navigate(href, {}, true);
                 }
 
                 onLinkEnd && onLinkEnd(event, linkProps);
@@ -126,8 +132,7 @@ class Component extends React.PureComponent {
                 className={cx(className, linkMatchesURL && activeClassName)}
                 href={linkMatchesURL ? null : href}
                 target={target}
-                onClick={onLinkTrigger}
-                >
+                onClick={onLinkTrigger}>
                 {children}
             </a>
         );

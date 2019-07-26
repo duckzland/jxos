@@ -147,7 +147,7 @@ class Component extends React.Component {
                         </div> }
                         { (children) && <div className={classes.inner}>{ children }</div> }
                         { option && <div className={classes.options}>
-                            <Button className={classes.option}
+                            <Button type="button" className={classes.option}
                                     audio={audio}
                                     animation={{ animate: energy.animate }}
                                     onClick={onOption}>
@@ -156,7 +156,7 @@ class Component extends React.Component {
                         </div> }
                         { linkText && linkUrl && <div className={classes.link}>
                             <Link href={linkUrl}>
-                                <Button onClick={onLink}>{linkText}</Button>
+                                <Button type="button" onClick={onLink}>{linkText}</Button>
                             </Link>
                         </div> }
                     </Secuence>

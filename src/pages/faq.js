@@ -8,6 +8,7 @@ import { Fader } from '../components/Fader';
 import { Secuence } from '../components/Secuence';
 import { Text } from '../components/Text';
 import { graphql } from 'gatsby';
+import { Donation } from '../components/Donation';
 
 const styles = theme => ({
     root: {},
@@ -61,6 +62,7 @@ class FAQ extends React.Component {
                                 )
                             }) }
                         </div>
+                        <Donation />
                     </Secuence>
                 </article>
             </Main>

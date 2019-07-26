@@ -7,6 +7,7 @@ import { Menu } from '../components/Menu';
 import { SocialLinks } from '../components/SocialLinks';
 import { Legal } from '../components/Legal';
 import { Frame } from '../components/Frame';
+import { Donation } from '../components/Donation';
 
 const styles = theme => {
     return {
@@ -75,6 +76,7 @@ class Component extends React.Component {
 
                         { false && <SocialLinks className={classes.social} onLinkStart={this.onLinkStart} /> }
                     </div>
+                    <Donation />
                     <Legal className={classes.legal} opaque onLinkStart={this.onLinkStart} />
                 </div>
             </Secuence>

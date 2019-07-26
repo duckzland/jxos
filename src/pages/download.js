@@ -9,6 +9,7 @@ import { Text } from '../components/Text';
 import { Fader } from '../components/Fader';
 import { Secuence } from '../components/Secuence';
 import { graphql } from 'gatsby';
+import { Donation } from '../components/Donation';
 
 const styles = theme => ({
     root: {},
@@ -74,7 +75,7 @@ class Download extends React.Component {
                                         <Frame type="frame_a">
                                             <h4 className={ classes.title }><Text>{ n.node.title }</Text></h4>
                                             <div className={ classes.description }><Text>{ n.node.description }</Text></div>
-                                            <div className={ classes.version }><Text>Version: { n.node.version }</Text></div>
+                                            <div className={ classes.version }><Text>{ 'Version:' + n.node.version }</Text></div>
                                             <div className={ classes.action }>
                                                 <Link target="_blank" href={n.node.project}><Text>View Project</Text></Link>
                                                 <Link target="_blank" href={n.node.url}><Text>Download</Text></Link>
@@ -84,6 +85,7 @@ class Download extends React.Component {
                                 )
                             }) }
                         </div>
+                        <Donation />
                     </Secuence>
                 </article>
             </Main>
