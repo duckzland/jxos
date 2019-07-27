@@ -3,8 +3,9 @@ category: Installation
 title: Image Disk File Installation
 ---
 
+>An empty space of 6GB minimum with recommended of 10GB empty space is required for installing this image file
 
-### Decompress File
+### File Decompression
 
 Image media is a disk image created using linux dd tools and compressed with xz compression tools.
 
@@ -21,8 +22,7 @@ In order to install it, you must extract the file using xz decompression tools s
 
 ### Write File to SSD
 
->It is highly recommended to use SSD as the target source instead of USB flash disk, If you must use USB FlashDisk 
- it is more suitable to use the LiveISO version instead.
+>It is highly recommended to use SSD as the target source instead of USB flash disk for this installation method, use the LiveISO method if you must use USB Flash disk.
 
 When the decompression complete, you should receive an .img file which then can be written to SSD via tool such as :
 
@@ -33,8 +33,9 @@ When the decompression complete, you should receive an .img file which then can 
 | **Ubuntu**             | `sudo dd if=/path/to/iso of=/dev/sdx`             |
 
 
-Writing the iso file content to the target disk is pretty straight forward process, under Rufus, you just need to 
+Rufus provides a straight forward process for writing the iso file content to the target disk, you just need to 
 select the SSD drive and the Iso source file and begin the imaging process.
+
 
 Under Linux, you can invoke dd command such as :
 
