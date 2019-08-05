@@ -36,9 +36,6 @@ class Component extends React.PureComponent {
         super(...arguments);
 
         this.state = {
-            line1Length: 0,
-            line2ItemsPositions: [],
-            line3ItemsPositions: [],
             circuitLines: [],
             circuitAnimationDone: false,
             elementReady: false
@@ -87,47 +84,10 @@ class Component extends React.PureComponent {
         if (!this.state.elementReady) {
             return;
         }
-        this.state.line1Length = this.getLine1Length();
-        this.state.line2ItemsPositions = this.getLine2ItemsPositions();
-        this.state.line3ItemsPositions = this.getLine3ItemsPositions();
+
         this.state.circuitLines = this.getCircuitLines();
     }
 
-    getLine1Length() {
-        const line1Height = 10;
-        const { height } = this.getPatternsElementSize();
-        return Math.ceil(height / line1Height);
-    }
-
-    getLine2ItemsPositions() {
-        const lineSpace = 100;
-        const { width } = this.getPatternsElementSize();
-        const length = Math.floor(width / lineSpace);
-
-        const itemsPositions = [];
-
-        for (let index = 0; index < length; index++) {
-            const itemPosition = getRandomNumber(index * lineSpace, index * lineSpace + lineSpace);
-            itemsPositions.push(itemPosition);
-        }
-
-        return itemsPositions;
-    }
-
-    getLine3ItemsPositions() {
-        const { height } = this.getPatternsElementSize();
-        const lineSpace = 200;
-        const length = Math.floor(height / lineSpace);
-
-        const itemsPositions = [];
-
-        for (let index = 0; index < length; index++) {
-            const itemPosition = getRandomNumber(index * lineSpace, index * lineSpace + lineSpace);
-            itemsPositions.push(itemPosition);
-        }
-
-        return itemsPositions;
-    }
 
     getCircuitLines() {
         const { width, height } = this.getPatternsElementSize();
@@ -187,12 +147,11 @@ class Component extends React.PureComponent {
         const { width } = this.getPatternsElementSize();
         const duration = Math.min(width, 1000);
 
-        //this.setState({circuitAnimationDone: false});
         this.state.circuitAnimationDone = false;
 
         // Light and horizontal lines
         this.animate(
-            [this.light1Element, ...this.line1Container.childNodes],
+            [this.light1Element],
             {opacity: 1, duration}
         );
 
@@ -229,7 +188,6 @@ class Component extends React.PureComponent {
 
         clearTimeout(this.standByStartId);
         this.standByStartId = setTimeout(() => {
-            //this.setState({circuitAnimationDone: true});
             this.state.circuitAnimationDone = true;
             if (this.props.onEnter) {
                 this.props.onEnter();
@@ -249,7 +207,7 @@ class Component extends React.PureComponent {
         const duration = energy.duration.exit;
 
         this.animate(
-            [this.light1Element, ...this.line1Container.childNodes],
+            [this.light1Element],
             {opacity: 0, duration}
         );
 
@@ -303,7 +261,6 @@ class Component extends React.PureComponent {
         }
 
         this.unanimate(this.light1Element);
-        this.unanimate(this.line1Container.childNodes);
         this.unanimate(this.dotLinesContainer);
         this.unanimate(this.dotLinesContainer.childNodes);
         this.unanimate(this.circuitContainer.querySelectorAll('*'));
@@ -411,7 +368,7 @@ class Component extends React.PureComponent {
     }
 
     render() {
-        const { line1Length, line2ItemsPositions,line3ItemsPositions,circuitLines } = this.state;
+        const { circuitLines } = this.state;
         const { theme, classes, energy, audio, sounds, className, children, initialMaxDuration, onEnter, onExit, ...etc} = this.props;
         const { width, height } = this.getPatternsElementSize();
 
@@ -419,11 +376,6 @@ class Component extends React.PureComponent {
             <div className={cx(classes.root, className)} {...etc}>
                 <div className={classes.patterns} ref={ref => (this.patternsElement = ref)}>
                     <div className={classes.light1} ref={ref => (this.light1Element = ref)}/>
-                    <div className={classes.line1Container} ref={ref => (this.line1Container = ref)}>
-                        {Array(line1Length).fill().map((value, index) => (
-                            <div key={index} style={{ top: `${index * 10}px` }} className={classes.line1}/>
-                        ))}
-                    </div>
                     <svg className={cx(classes.svgContainer, classes.circuitContainer)}
                         ref={ref => (this.circuitContainer = ref)}
                         xmlns='http://www.w3.org/2000/svg'>

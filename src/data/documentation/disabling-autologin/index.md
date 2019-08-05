@@ -12,7 +12,7 @@ sudo systemctl disable nodm
 and to re-enable it again :
 
 ```bash
-sudo systemctl enable nodm
+sudo dpkg-reconfigure nodm
 ```
 
 to completely remove it :

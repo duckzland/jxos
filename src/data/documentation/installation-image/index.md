@@ -3,7 +3,7 @@ category: Installation
 title: Image Disk File Installation
 ---
 
->An empty space of 6GB minimum with recommended of 10GB empty space is required for installing this image file
+>An empty space of 8GB minimum with recommended of 10GB empty space is required for installing this image file
 
 ### File Decompression
 
