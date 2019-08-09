@@ -1,15 +1,15 @@
 -
   title: LiveISO
-  url: "http://www.mediafire.com/file/omk3smeceufse8z/jxos-2019-livecd-RC6.iso/file"
+  url: "http://www.mediafire.com/file/1un3qseeg4d2la6/jxos-2019-livecd-RC7.iso/file"
   description: LiveISO version for JXOS, suitable for testing the OS using USB stick
-  version: jxos-2019-livecd-RC6
+  version: jxos-2019-livecd-RC7
   project: "https://github.com/duckzland/jxos-livecd"
 
 -
   title: Compressed Image
-  url: "http://www.mediafire.com/file/i0z2w1oxqdfxdhb/jxos-2019-image-RC6.img.xz/file"
+  url: "http://www.mediafire.com/file/lc9sosfvv6f7osv/jxos-2019-image-RC7.img.xz/file"
   description: "Compressed image file for burning into SSD or normal hard drive, suitable for production server"
-  version: jxos-2019-install-image-RC6
+  version: jxos-2019-install-image-RC7
   project: "https://github.com/duckzland/jxos-image"
 
 -
@@ -28,9 +28,9 @@
 
 -
   title: "JXDashboard"
-  url: "https://github.com/duckzland/jxos-repo/raw/master/jxdashboard_2.0.1_amd64.deb"
+  url: "https://github.com/duckzland/jxos-repo/raw/master/jxdashboard_2.0.2_amd64.deb"
   description: "Electron App for managing JXMiner via GUI"
-  version: "2.0.1"
+  version: "2.0.2"
   project: "https://github.com/duckzland/jxdashboard"
 
 -
@@ -42,9 +42,9 @@
 
 -
   title: "JXMonitor"
-  url: "https://github.com/duckzland/jxos-livecd/raw/master/data/deb/packages/python-jxmonitor_0.3.8_all.deb"
+  url: "https://github.com/duckzland/jxos-livecd/raw/master/data/deb/packages/python-jxmonitor_0.4.0_all.deb"
   description: "Script for monitoring JXMiner activity via TUI"
-  version: "0.3.8"
+  version: "0.4.0"
   project: "https://github.com/duckzland/jxmonitor"
 
 
