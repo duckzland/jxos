@@ -33,6 +33,9 @@ const styles = theme => ({
         margin: 'auto',
         textAlign: 'center',
         width: 400
+    },
+    donation: {
+        marginTop: 90
     }
 });
 
@@ -58,7 +61,7 @@ class NotFound extends React.PureComponent {
                             <h1><Text>Not found</Text></h1>
                             <p><Text>The location you are looking for was not found in the system.</Text></p>
                         </Frame>
-                        <Donation />
+                        <Donation className={ classes.donation } />
                     </Secuence>
                 </main>
             </div>
