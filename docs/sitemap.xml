@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://duckzland.github.io/jxos/disabling-autologin/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://duckzland.github.io/jxos/disabling-jxdashboard/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://duckzland.github.io/jxos/installation-image/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://duckzland.github.io/jxos/installation-liveiso/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://duckzland.github.io/jxos/jxminer-config/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://duckzland.github.io/jxos/services-coins/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://duckzland.github.io/jxos/services-fans/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://duckzland.github.io/jxos/services-machine/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://duckzland.github.io/jxos/services-sensors/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://duckzland.github.io/jxos/services-slack/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://duckzland.github.io/jxos/services-systemd/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://duckzland.github.io/jxos/services-tuner/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://duckzland.github.io/jxos/services-watchdog/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://duckzland.github.io/jxos/setup-fancontrol/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://duckzland.github.io/jxos/documentation/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://duckzland.github.io/jxos/download/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://duckzland.github.io/jxos/faq/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://duckzland.github.io/jxos/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+</urlset>
