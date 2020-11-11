@@ -3,7 +3,7 @@ const theme = require('./src/settings/theme');
 module.exports = {
     pathPrefix: "/jxos",
     siteMetadata: {
-        siteUrl: `https://jxos.work`,
+        siteUrl: `https://duckzland.github.io/`,
     },
     plugins: [
         `gatsby-plugin-sitemap`,
