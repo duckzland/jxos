@@ -114,7 +114,7 @@ module.exports = {
                 https: true,
                 www: false,
                 SymLinksIfOwnerMatch: true,
-                host: 'jxos.work',
+                host: 'duckzland.github.io',
                 custom: `
                 <IfModule mod_expires.c>
                     ExpiresActive On

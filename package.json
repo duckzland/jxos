@@ -55,7 +55,7 @@
     "gatsby-remark-prismjs": "^3.3.3",
     "gatsby-remark-smartypants": "^2.1.2",
     "gatsby-transformer-remark": "^2.6.8",
-    "gh-pages": "^2.0.1",
+    "gh-pages": "^2.2.0",
     "html-minifier": "^4.0.0",
     "prismjs": "^1.17.1"
   }

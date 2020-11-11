@@ -268,8 +268,8 @@ AddDefaultCharset utf-8
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteCond %{HTTP_HOST} !=jxos.work
-  RewriteRule (.*) %{ENV:PROTO}://jxos.work/$1 [R=301,L]
+  RewriteCond %{HTTP_HOST} !=duckzland.github.io
+  RewriteRule (.*) %{ENV:PROTO}://duckzland.github.io/$1 [R=301,L]
 </IfModule>
 
 
